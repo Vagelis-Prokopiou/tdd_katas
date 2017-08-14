@@ -1,8 +1,13 @@
-const getRomanNumeral = function(number)
+(() =>
 {
-    return 'X';
-}
+    const getRomanNumeral = function(number)
+    {
+        return 'X';
+    }
 
-module.exports = {
-    getRomanNumeral
-}
+    module.exports = {
+        getRomanNumeral
+    }
+})()
+
+
