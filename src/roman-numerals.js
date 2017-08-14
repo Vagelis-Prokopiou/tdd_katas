@@ -1,6 +1,8 @@
+const getRomanNumeral = function(number)
+{
+    return 'X';
+}
+
 module.exports = {
-    log: function()
-    {
-        return 'Working';
-    }
+    getRomanNumeral
 }

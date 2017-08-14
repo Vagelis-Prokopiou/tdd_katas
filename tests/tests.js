@@ -1,10 +1,9 @@
-const roman_numerals = require('../src/roman-numerals.js');
-roman_numerals.log();
+const getRomanNumeral = require('../src/roman-numerals.js').getRomanNumeral;
 
-describe('test', function()
+describe('getRomanNumeral(number)', function()
 {
-    it('should return true', function()
+    it('should return the right Roman numeral, given a number', function()
     {
-        expect(roman_numerals.log()).toEqual("Working");
-    })
+        expect(getRomanNumeral(1)).toBe('X');
+    });
 });
