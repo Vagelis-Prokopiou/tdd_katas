@@ -1,6 +1,7 @@
 // (function()
 // {
-const RomanNumeral         = function() {};
+const RomanNumeral = function() {};
+
 RomanNumeral.prototype.get = function(providedNumber)
 {
     const numerals = [
