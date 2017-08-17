@@ -5,8 +5,8 @@ module.exports = function(config)
         frameworks: ['jasmine'],
         browsers: ['PhantomJS'],
         files: [
-            './src/roman-numerals.js',
-            './tests/tests.js'
+            'src/RomanNumeral.js',
+            'tests/RomanNumeral-Spec.js'
         ]
     });
 };
