@@ -1,10 +1,8 @@
 // (function()
 // {
-const RomanNumeral = function() {};
-
-RomanNumeral.prototype.get = function(providedNumber)
+const RomanNumeral = (function()
 {
-    const numerals = [
+    const numerals     = [
         {value: 1000, 'numeral': 'M'},
         {value: 900, 'numeral': 'CM'},
         {value: 500, 'numeral': 'D'},
@@ -18,20 +16,35 @@ RomanNumeral.prototype.get = function(providedNumber)
         {value: 4, 'numeral': 'IV'},
         {value: 1, 'numeral': 'I'}
     ];
+    const RomanNumeral = function() {};
     
-    var numeralString = '';
-    
-    numerals.forEach(function(item)
+    RomanNumeral.prototype.getNumeralFromNumber = function(n)
     {
-        while (providedNumber >= item.value)
+        var numeralString = '';
+        
+        numerals.forEach(function(item)
         {
-            numeralString += item.numeral;
-            providedNumber -= item.value;
-        }
-    });
+            while (n >= item.value)
+            {
+                numeralString += item.numeral;
+                n -= item.value;
+            }
+        });
+        
+        return numeralString;
+    };
     
-    return numeralString;
-};
+    RomanNumeral.prototype.getNumberFromNumeral = function(numeral)
+    {
+        if (numeral !== 'string')
+        {
+            throw new Error('numeral should be a string');
+        }
+    };
+    
+    return RomanNumeral;
+})();
+
 
 // module.exports = {
 //     'RomanNumeral': RomanNumeral
